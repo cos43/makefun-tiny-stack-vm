@@ -1,8 +1,7 @@
 // Tiny stack VM: runs every program in the input dir on the ISA in the kit
 // (32-bit wrapping arithmetic, 256-value data stack, 64-deep call stack,
 // 256 words of memory, byte I/O, ten traps) and writes each program's
-// output bytes and exit code. Local run on the practice set:
-//   mkdir -p out && MAKEFUN_INPUT_DIR=practice/input MAKEFUN_OUTPUT_DIR=out node main.ts
+// output bytes and exit code.
 import { mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 const IN = process.env.MAKEFUN_INPUT_DIR ?? '/input';
